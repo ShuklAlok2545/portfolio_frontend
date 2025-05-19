@@ -1,0 +1,28 @@
+#cursor{
+    position: fixed;
+    z-index: 100000;
+    top: 40px;
+}
+  .cursor {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background-color: rgb(123, 0, 255);
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform 0.15s cubic-bezier(0.25, 1, 0.5, 1);
+    z-index: 1000;
+  }
+  
+  /* Styles for trailing elements */
+  .trail {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(21, 0, 255, 0.918);
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform 0.15s cubic-bezier(0.25, 1, 0.5, 1);
+    z-index: 1000;
+  }
+  
