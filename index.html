@@ -9,7 +9,11 @@
     <title>Alok Kumar Shukla || Portfolio</title>
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="portfolio.css" />
+
+    <!-- <link rel="stylesheet" href="new.css"> -->
+
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -19,22 +23,21 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
       integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      referrerpolicy="no-referrer"2
     />
 
   </head>
   <body >
-
     <!-- header & navbar -->
     <div id="cursor"></div>
-    <header id="main">Alok Shukla Portfolio</header>
+    <header id="main">Welcome to my Portfolio</header>
     <div class="menu">
       <div class="inmenu">
         <i class='bx bx-list-ul list' ></i>
         <i class='bx bx-x xc' ></i>
       </div>
     </div>
-    <navbar >
+    <navbar>
       <div class="img">
         <img id="img" src="./image/logo.png" alt="" />
       </div>
@@ -51,6 +54,9 @@
           >
         </li>
         <li>
+          <a href="#projects"><i class="bx bx-award"></i> Projects</a>
+        </li>
+        <li>
           <a href="#education"><i class="bx bx-book-open"></i> education</a>
         </li>
         <li>
@@ -64,14 +70,14 @@
         <div  data-aos="zoom-in" class="itxt">
           <p>Hi There,</p>
           <br>
-          <p >i'm <span id="titlecl"> alok shukla</span></p>
+          <p >i'm <span id="titlecl"> alok kumar</span></p>
           <br>
           <div class="element">
             <h2 id="element"></h2>
           </div>
        <a href="#about"><button  class="abtbtn" >About Me <i class='bx bxs-down-arrow-circle' ></i></button>  </a>
        <div  data-aos="fade-up"  class="social">
-        <div id="s1" class="s"><a target="_blank" href="https://www.linkedin.com/in/alok-shukla-73357928a/"> <i class='bx bxl-linkedin-square' ></i></a></div>
+        <div id="s1" class="s"><a target="_blank" href="https://www.linkedin.com/in/alok-shukla-ack/"> <i class='bx bxl-linkedin-square' ></i></a></div>
        
         <div id="s2" class="s"> <a target="_blank" href="https://www.instagram.com/shuklalok_.2545/"><i class='bx bxl-instagram-alt' ></i></a> </div>
 
@@ -94,7 +100,7 @@
     <section data-aos="fade-up"  class="section2" data-aos-duration="500">
       <h1 id="blac"><i class='bx bxs-user' ></i> About <span class="red">Me</span></h1>
       <div  class="mainsec">
-   <center><h2 data-aos="fade-up"  data-aos-duration="5000">I'm Alok</h2></center>   
+    
    <div data-aos="fade-up" class="centre"><div ><i class="bx bx-laptop bx-flip-horizontal"></i> Mern-stack Developer | Web-Developer</div></div>  
    <p data-aos="fade-up">
     ➤ I am a dedicated MERN-Stack developer with a passion for crafting robust and scalable web applications. With a strong foundation in
@@ -118,9 +124,9 @@
    </div>
    <center>
     
-    <a href="Alok_Kumar_Resume.pdf" target="_blank"><button class="btn">Resume &gt;</button></a>
+    <a href="./documents/Alok_resume.pdf" target="_blank"><button class="btn">Resume <i class="bx bx-show"></i></button></a>
 
-    <button style="width: 20px;" class="btn">  <a style="color: aliceblue;" href="Alok_Kumar_Resume.pdf" download>⤓</a></button>
+    <button style="width: 20px;" class="btn">  <a style="color: aliceblue;" href="./documents/Alok_resume.pdf" download><i class="bx bx-download"></i></a></button>
   </center>
   
       </div>
@@ -168,6 +174,71 @@
         <h4>Express Js</h4>
       </div>
     </section>
+
+  <!-- project-section -->
+  
+  <br id="projects">
+  <section class="projects" style="background-color: brown;">
+    <h1 id="blac"><i class='bx bx-laptop'></i> Projects & <span id="yellow">Achievements</span> </h1>
+    <h1></h1>
+    <div class="projects-container">
+      <div class="prj" id="prj1">
+        <h2> 🎉 
+          Public Chat App - React & Node.js</h2> <hr>
+        <p>
+          The Public Chat App is a real-time messaging platform built using the MERN stack (MongoDB, Express.js, React, Node.js), 
+          enhanced with Socket.IO for seamless, live communication between users. The frontend features intuitive components like 
+          ChatBox, UserList, and MessageInput, offering a smooth and responsive user interface. The backend handles 
+          message routing and user management, with MySQL integrated to store unique users and enforce UNIQUE constraints 
+          on usernames. Additional features include voice-to-text input using react-speech-recognition, message deletion, 
+          and a mobile-friendly design. This project demonstrates practical implementation of both frontend and backend technologies, 
+          focusing on performance, usability, and real-time interactivity.
+         </p>
+         <a target="_blank" href="https://github.com/ShuklAlok2545/public_chat"> <button>Source Code <i class="bx bx-show"></i> </button></a>
+       
+      </div> 
+      <div class="prj" id="prj2">
+        <h2>🎉Bet24 MineGames</h2>
+        <p> Bet24 Mine Game is an interactive web application that merges an engaging mine game with a 
+          real-time public chat feature, allowing users to play and communicate simultaneously. Developed using the 
+          MERN stack (Express.js, React.js, Node.js) and MySQL for robust and structured data management, the 
+          app offers a dynamic and social gaming experience. It includes features such as JWT-based user authentication,
+           profit/loss calculation, and secure user sessions. The real-time chat functionality is enabled through Socket.IO, 
+           allowing all connected users to interact instantly. This project showcases my ability to integrate full-stack technologies,
+            manage authentication securely, and deliver responsive, user-centric web applications.
+
+
+        </p>
+        <a target="_blank" href="https://github.com/ShuklAlok2545/bet24mineGames"> <button>Source Code <i class="bx bx-show"></i></button></a>
+      </div>
+      <div class="prj" id="prj3">
+        <h2>Virtual internship and training</h2>
+        <h3>👉🏼 Ethical Hacking & Penetration Testing Internship – C-DAC / MeitY</h3>
+        <p>
+          I have successfully completed a virtual internship in Ethical Hacking and Penetration Testing from the Centre for
+           Development of Advanced Computing (C-DAC), under the Ministry of Electronics and Information Technology (MeitY), 
+           Government of India. This internship provided hands-on experience with industry-standard tools and techniques used 
+           in cybersecurity, including vulnerability assessment, network security, and ethical hacking practices. Through practical
+            projects and guided learning, I enhanced my understanding of information security and developed real-world skills crucial for securing digital infrastructure.
+        </p>
+        <a target="_blank" href="./documents/Alok_kumar_InternCerti.pdf"><button>VIEW CERTIFCATE <i class="bx bx-show"></i></button></a>
+      </div>
+      <div class="prj" id="prj4">
+        <h2>TECHVAGANZA NIT SRINAGAR</h2>
+        <h3>👉🏼 Participation in Web Designing Competition</h3>
+        <p>
+          I had the opportunity to participate in the Web Designing Competition at TECHVAGANZA, the annual 
+          technical fest of NIT Srinagar. This event brought together creative and technical minds from across the
+           country, providing a platform to showcase front-end development and UI/UX design skills. Through this 
+           competition, I challenged myself to build a visually appealing and functional web layout under time constraints,
+            which sharpened my design thinking and coding efficiency. The experience was both inspiring and educational, 
+            allowing me to interact with fellow tech enthusiasts and gain valuable insights into real-world design practices. 
+            I was awarded a certificate for my participation, marking a significant milestone in my development journey.
+        </p>
+        <a target="_blank" href="./documents/alok_kumar_Certificate.pdf"><button>VIEW CERTIFCATE <i class="bx bx-show"></i></button></a>
+      </div>
+    </div>
+  </section>
  <!-- education section -->
     <br id="education" />
     <section class="section4">
@@ -259,7 +330,7 @@
           </div>
           <div class="rp3">
             <div  class="social">
-              <div id="s1" class="k"><a target="_blank" href="https://www.linkedin.com/in/alok-shukla-73357928a/"> <i class='bx bxl-linkedin-square' ></i></a></div>
+              <div id="s1" class="k"><a target="_blank" href="https://www.linkedin.com/in/alok-shukla-ack/"> <i class='bx bxl-linkedin-square' ></i></a></div>
              
               <div id="s2" class="k"> <a target="_blank" href="https://www.instagram.com/shuklalok_.2545/"><i class='bx bxl-instagram-alt' ></i></a> </div>
       
@@ -270,11 +341,14 @@
       
       </div>
       <hr>
-      <center id="btmft">Copyright @ 2024 All Rights Reserved <a href="https://www.linkedin.com/in/alok-shukla-73357928a/">Alok Shukla</a> </center>
+      <center id="btmft">Copyright @ 2024 All Rights Reserved <a href="https://www.linkedin.com/in/alok-shukla-ack/">Alok Kumar Shukla</a> </center>
     </footer> 
 
 <!-- script section -->
+
+
     <script src="cursor.js"></script>
+    <!-- <script src="new.js"></script> -->
 
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script
@@ -286,6 +360,8 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="portfolio.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
   </body>
 </html>
