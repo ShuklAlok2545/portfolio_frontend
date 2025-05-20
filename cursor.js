@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-const trailSize = 16; // Number of trail elements
+const trailSize = 20; // Number of trail elements
 const trailElements = [];
 let mouseX = 0, mouseY = 0;
 let isMouseMoving = false;

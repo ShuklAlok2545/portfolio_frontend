@@ -94,7 +94,6 @@ inmenu.addEventListener("click" , ()=>{
         });
 
         const result = await response.json();
-        console.log(result);
 
         if (response.ok) {
           alert("✅ Form submitted successfully!");
