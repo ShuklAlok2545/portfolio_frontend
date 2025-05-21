@@ -154,7 +154,6 @@ animation: zoom 0.5s infinite;
   padding-top: 7rem;
   padding-left: 2rem;
   border-radius: 16px;
-
 }
 #titlecl{
   color: blueviolet;
@@ -162,7 +161,10 @@ animation: zoom 0.5s infinite;
 .itxt p{
   font-weight: 700;
   font-size: 3rem;
-  color: rgb(37, 37, 37);
+  color: rgba(22, 28, 56, 0.859);
+}
+#element{
+  color: #ad0202;
 }
 .abtbtn{
   margin-top: 1rem;
@@ -259,8 +261,8 @@ background-color: rgb(0, 0, 0);
     height:90vh;
 }
 .section2{
- padding-top: 2rem;
- height: 100vh; 
+     padding-top: 10px;
+    height: max-content;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -287,7 +289,7 @@ background-color: rgb(0, 0, 0);
   font-size: 14px;
   opacity: 1;
   padding: 1rem;
-  color: rgb(216, 212, 214);
+  color: rgb(255, 255, 255);
 }
 .flexcont{
   margin-top: 1rem;
@@ -328,13 +330,13 @@ background-color: rgb(0, 0, 0);
 .section3{
   background-image: linear-gradient(to right, rgba(43,89,146) , rgb(70,149,95));
   margin-top: 0rem;
-  height: 90vh;
   margin-top: 2rem;
   padding: 1rem 0 2rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: max-content;
 }
 h1{
 color: white;
@@ -344,7 +346,7 @@ color: white;
 .gr{
   border-radius: 14px;
    background-color:rgba(0, 0, 0, 0.48);
-  height: 69vh;
+  height: max-content;
   width: 70%;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   display: grid;
@@ -392,13 +394,13 @@ color: white;
   justify-content: center;
 }
 .gr2{
-
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   background-color: rgba(155, 178, 240, 0.384);
-  height: 70vh;
+  min-height: 70vh;
+  max-height: max-content;
   width: 100%;
   background-image: linear-gradient(to top, rgba(32, 156, 156, 0.799),rgba(186, 190, 186, 0.345) , rgba(160, 139, 244, 0.75));
 
@@ -416,7 +418,7 @@ background-color: rgba(95,177,175);
   margin-right: 1rem;
 }
 #tagnit {
- display: flex;
+  display: flex;
   flex-direction: column;
   text-transform: capitalize;
   padding-top: 1rem;
@@ -429,14 +431,14 @@ background-color: rgba(95,177,175);
   margin-top: 1rem;
 }
 .edubx2{
-
 margin: 1rem;
 width: 80%;
 height: 100%;
 background-color: rgba(69, 141, 255, 0.67);
 }
 .section5{
-    height: 80vh;
+    height: max-content;
+    padding: 10px;
     background-color: rgb(230,235,250);
     display: flex;
     align-items: center;
@@ -444,25 +446,23 @@ background-color: rgba(69, 141, 255, 0.67);
     justify-content: center;
 }
 .cntform{
-  z-index: 1;
+  height: max-content;
+}
+.cntform{
+   z-index: 1;
     display: flex;
     flex-direction: row;
     margin-top: 1rem;
     background-color:rgb(255, 255, 255);
-    height: 60vh;
-    width: 76%;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
     border-radius:14px;
     padding: 1rem;
 }
-
 .formcont{
     display: flex;
     align-items: center;
     justify-content: center;
     float: right;
-    width: 100%;
-    height:60vh ;
     background-color: rgb(255, 255, 255);
     border-radius:14px;
 }
@@ -724,7 +724,7 @@ a.top2{
 /* mediaquery starts */
 
 
-@media (min-width: 700px) and (max-width: 1000px) {
+@media (min-width: 760px) and (max-width: 1000px) {
   *{
     margin: 0;
     padding: 0;
@@ -754,25 +754,25 @@ a.top2{
   }
 
   .section4{
-    height: 90vh;
+    height: max-content;
    
   }
   .gr2{
-    height: 90vh;
+    height: max-content;
    
   }
   .edubx{
     width: 90%;
   }
   .nit img{
-   
     width: fit-content;
     width: 100%;
+    height: max-content;
   }
   #tagnit{
   
-    height:25vh ;
-   padding-left: 1rem;
+    height:max-content;
+    padding-left: 1rem;
     display: flex;
     
   }
@@ -798,27 +798,34 @@ a.top2{
    
   }
   .hidden{
-    
     transition: all 0.7s;
     transform: translateY(-120vh);
   }
    
-  .section1{
-    height: 100vh;
+  .section1,.section2{
+    height: max-content;
+    padding: 10px;
+  }
+  .left{
+    border-radius: 20px;
   }
   .right .propic img{
     width: 240px;
     height: 240px;
   }
-  .section5{
-    height: 90vh;
+  .section5,.cntform,.formcont{
+    padding: 4px;
+    height: max-content;
   }
-
+  .gr,.section3{
+    height: max-content;
+  }
+  
 }
 
 
 
-@media (min-width: 500px) and (max-width: 699px){
+@media (min-width: 500px) and (max-width: 760px){
   *{
     margin: 0%;
     padding: 0%;
@@ -830,31 +837,31 @@ a.top2{
   
 }
 .section2{
-  height: 130vh;
+  height: max-content;
   margin-top: 1rem;
-   width: 100%;
+  width: 100%;
 }
 navbar{
   position: sticky;
   top: 0rem;
+  width: 100%;
 }
 navbar ul li a{
-  font-size: 14px;
+  font-size: 10px;
 }
 navbar ul li a:hover{
-  font-size: 14px;
+  font-size: 12px;
 }
   .img {
     display: none;
   }
   .section1{
-    height: 120vh;
+    height: max-content;
     display: flex;
     flex-direction: column;
   }
   .right{
-  margin-top: 5rem;
-
+    margin-top: 5rem;
   }
   .itxt{
     display: flex;
@@ -867,6 +874,7 @@ navbar ul li a:hover{
     background-color: #333;
   }
   .itxt>p{
+    font-size: 26px;
     color: #ffffff;
   }
   .right .propic img{
@@ -879,7 +887,6 @@ navbar ul li a:hover{
   }
   .gr2{
     height:max-content;
-   
   }
   .edubx{
     width: 90%;
@@ -893,7 +900,7 @@ navbar ul li a:hover{
   #tagnit{
   
     height:30vh ;
-   padding-left: 1rem;
+    padding-left: 1rem;
     display: flex;
     
   }
@@ -956,11 +963,22 @@ navbar ul li a:hover{
     display: none;
   }
   .mainsec>p{
-    color: #ccc202;
+    color: #fec58c;
+    word-spacing: 2px;
   }
-.section2 >.fd{
-  color: #bcb304;
+  .flexcont{
+    flex-direction: column;
+  }
+  .flexcont>.fd{
+    color:  #f8a553;
+  }
+  .element >h3{
+    color: #ffffff;
+  }
+.gr,.section3{
+  height: max-content;
 }
+
 }
  
 
@@ -968,6 +986,9 @@ navbar ul li a:hover{
 
 
 @media (min-width: 0px) and (max-width: 499px){
+  .element >h3{
+    color: #ffffff;
+  }
   body{
     margin: 0;
     padding: 0;
@@ -1230,6 +1251,10 @@ navbar ul li a:hover{
   #blac,#yelllow{
     font-size: 25px;
   }
+  .gr,.section3{
+    height: max-content;
+  }
+  
   
   }
 
