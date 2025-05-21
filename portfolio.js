@@ -47,6 +47,9 @@ inmenu.addEventListener("click" , ()=>{
     form.addEventListener("submit", async function (e) {
       e.preventDefault();
 
+
+
+
       const name = form.name.value.trim();
       const mail = form.mail.value.trim();
       const contact = form.contact.value.trim();
@@ -78,7 +81,20 @@ inmenu.addEventListener("click" , ()=>{
         return;
       }
 
-      // ==== SEND TO BACKEND ====
+             // Creating  message box with css
+             const messageBox = document.createElement("p");
+             messageBox.textContent = "Submitting...";
+             messageBox.style.marginTop = "10px";
+             messageBox.style.padding = "10px";
+             messageBox.style.backgroundColor = "wheat";
+             messageBox.style.color = "green";
+             messageBox.style.border = "1px solid #ccc";
+             messageBox.style.borderRadius="6px";
+
+             // Append to body (or below the form)
+             this.parentNode.insertBefore(messageBox, this.nextSibling);
+
+    //sending to backend
       const data = {
         name,
         mail,
@@ -96,13 +112,16 @@ inmenu.addEventListener("click" , ()=>{
         const result = await response.json();
 
         if (response.ok) {
+          messageBox.remove(); // removieng messagebox
           alert("✅ Form submitted successfully!");
           form.reset();
         } else {
+          messageBox.remove();
           alert("❌ Submission failed: " + result.error);
         }
       } catch (error) {
         console.error("Submission Error:", error);
+        messageBox.remove();
         alert("🚨 An error occurred. Please try again later.");
       }
     });
