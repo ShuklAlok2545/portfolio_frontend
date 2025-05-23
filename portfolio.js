@@ -113,7 +113,7 @@ inmenu.addEventListener("click" , ()=>{
         const result = await response.json();
 
         if (response.ok) {
-             messageBox.textContent = "done😊!";
+             messageBox.textContent = "done!";
              messageBox.style.marginTop = "10px";
              messageBox.style.padding = "10px";
              messageBox.style.backgroundColor = "#fff";
