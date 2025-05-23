@@ -91,7 +91,7 @@ inmenu.addEventListener("click" , ()=>{
              messageBox.style.border = "1px solid #ccc";
              messageBox.style.borderRadius="6px";
 
-             // Append to body (or below the form)
+             // Appending to body (or below the form)
              this.parentNode.insertBefore(messageBox, this.nextSibling);
 
     //sending to backend
@@ -101,6 +101,7 @@ inmenu.addEventListener("click" , ()=>{
         contact,
         message
       };
+
       //https://portfolio-backend-1azx.onrender.com 
       try {
         const response = await fetch("https://portfolio-backend-1azx.onrender.com/api/contact", {
@@ -112,17 +113,22 @@ inmenu.addEventListener("click" , ()=>{
         const result = await response.json();
 
         if (response.ok) {
-          messageBox.remove(); // removieng messagebox
-          alert("✅ Form submitted successfully!");
-          form.reset();
+             messageBox.textContent = "done😊!";
+             messageBox.style.marginTop = "10px";
+             messageBox.style.padding = "10px";
+             messageBox.style.backgroundColor = "#fff";
+             messageBox.style.color = "blue";
+             form.reset();
+             setTimeout(()=>{
+              messageBox.remove();
+             },2000)
         } else {
           messageBox.remove();
           alert("❌ Submission failed: " + result.error);
         }
       } catch (error) {
-        console.error("Submission Error:", error);
         messageBox.remove();
-        alert("🚨 An error occurred. Please try again later.");
+        alert("❌ Submission failed: an error encountered");
       }
     });
   });
