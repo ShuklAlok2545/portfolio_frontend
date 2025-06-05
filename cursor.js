@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-const trailSize = 20; // Number of trail elements
+const trailSize = 20; 
 const trailElements = [];
 let mouseX = 0, mouseY = 0;
 let isMouseMoving = false;
 
-// Create trailing elements but DO NOT place them yet
+// Creating trailing elements but DO NOT place them yet
 for (let i = 0; i < trailSize; i++) {
     let trail = document.createElement("div");
     trail.classList.add("trail");
