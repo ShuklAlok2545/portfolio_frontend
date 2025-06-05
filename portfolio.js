@@ -145,7 +145,7 @@ inmenu.addEventListener("click" , ()=>{
   heart.addEventListener('click', async () => {
     if (!localStorage.getItem('hasClickedHeart')) {
       try {
-        await fetch('https://portfolio-backend-1azx.onrender.com/like', {
+        await fetch('https://portfolio-backend-1azx.onrender.com/api/like', {
           method: 'POST',
         });
         localStorage.setItem('hasClickedHeart', 'true');
