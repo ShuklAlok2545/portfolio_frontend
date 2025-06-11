@@ -269,7 +269,8 @@ color:  rgb(255, 255, 255);
 background-color: #333;
 }
 .itxt> p{
-  color: #fabfbf;
+  color: #ffffff;
+  font-size: 34px;
 }
 .section2{
     padding-top: 10px;
@@ -741,13 +742,14 @@ a.top2{
 #s4{
   position: fixed;
   bottom: 14px;
-  right: 20px;
+  right: 10%;
   transition: all 0.4s;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 4px;
+  z-index: 100;
 }
 #count{
   background-color: #6568677c;
@@ -1126,9 +1128,10 @@ navbar ul li a:hover{
     opacity: 0;
   }
   navbar.hidenav{
-    position: sticky;
+    position: fixed;
     top: 4rem;
     display: flex;
+    width: 100%;
     transition: all 0.4s;
     transform: translateX(0rem);
     box-shadow: rgba(148, 147, 147, 0.15) 2.4px 2.4px 3.2px;
@@ -1144,7 +1147,6 @@ navbar ul li a:hover{
     min-height: max-content;
     height: max-content;
     padding: 10px;
-
   }
   .section1 .left{
     top: 6rem;
