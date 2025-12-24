@@ -26,7 +26,7 @@ navbar {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
   height: 4rem;
-  background-color: rgb(255, 255, 255);
+  background-color:  rgb(242, 238, 255);
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -105,7 +105,6 @@ ul li a:hover i {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: rgba(145, 145, 244, 0.854);
   bottom: 0;
   left: 0;
   z-index: -9;
@@ -203,6 +202,7 @@ animation: zoom 0.5s infinite;
   height: 2rem;
   width: 2rem;
   border-radius: 50%;
+  border: 0.4px solid rgb(41, 41, 41);
 }
 .s a{
   text-decoration: none;
@@ -236,6 +236,9 @@ color:  rgb(255, 255, 255);
 .propic{
   display: flex;
   align-items: center;
+  border: 2px solid rgb(191, 221, 252);
+  border-radius: 50%;
+  padding: 3.5px;
   filter: drop-shadow(0 0 1rem rgba(3, 13, 41, 0.589));
 }
 .propic:hover{
@@ -249,7 +252,7 @@ color:  rgb(255, 255, 255);
   transform: rotate(-40deg);
   scale: 1.014;
   filter: drop-shadow(0 0 1rem rgba(47, 86, 4, 0.797)) sepia(0.1);
-  filter: drop-shadow(0 0 1rem rgba(227, 228, 227, 0.53));
+  filter: drop-shadow(0 0 1rem rgba(39, 38, 53, 0.53));
   transition: all 0.5s;
 }
 .propic img:hover{
@@ -357,7 +360,7 @@ color: white;
 }
 .gr{
   border-radius: 14px;
-   background-color:rgba(0, 0, 0, 0.48);
+  background-color:rgba(0, 0, 0, 0.48);
   height: max-content;
   width: 70%;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
@@ -414,6 +417,10 @@ color: white;
   min-height: 70vh;
   max-height: max-content;
   width: 100%;
+  box-shadow: 
+  0 8px 32px rgba(0, 0, 0, 0.35),   /* main depth */
+  0 0 20px rgba(255, 180, 0, 0.25);  /* glowing accent */
+  border-radius: 20px;
   background-image: linear-gradient(to top, rgba(32, 156, 156, 0.799),rgba(186, 190, 186, 0.345) , rgba(160, 139, 244, 0.75));
 
 }
@@ -594,8 +601,7 @@ center{
   background-color: rgb(249, 216, 73);
 }
 footer{
-  min-height: 30vh;
-  max-height: max-content;
+  height: max-content;
   background-color:rgb(0,1,41);
   
 }
@@ -694,6 +700,7 @@ a.top2{
   position: absolute;
 }
 .top2{
+  cursor: pointer;
   position: sticky;
   bottom: 10vh;
   left: 1%;
@@ -750,6 +757,7 @@ a.top2{
   flex-direction: column;
   padding: 4px;
   z-index: 100;
+  cursor: pointer;
 }
 #count{
   background-color: #6568677c;
@@ -767,8 +775,16 @@ a.top2{
   transition: all 0.3s;
 }
 #heart:hover>i:hover{
-background-color: #7703dd;
-color: rgb(3, 218, 129);
+  background-color: #7703dd;
+  color: rgb(3, 218, 129);
+  }
+
+  #blogs.popup{
+    color: black;
+    background: skyblue;
+  }
+  #rsmbtn.rsmpop{
+    background: rgb(175, 137, 1);
   }
 
 /* mediaquery starts */
@@ -817,6 +833,7 @@ color: rgb(3, 218, 129);
     width: fit-content;
     width: 100%;
     height: max-content;
+    
   }
   #tagnit{
   
@@ -839,8 +856,8 @@ color: rgb(3, 218, 129);
     transition: all 0.5s;
     transform: translate(2px);
     z-index: 1000;
-    
   }
+
   .top2 i{
     font-size: 1.8rem;
     color: white;
@@ -935,6 +952,7 @@ navbar ul li a:hover{
    
   }
   .gr2{
+    border-radius: 60px;
     height:max-content;
   }
   .edubx{
@@ -942,12 +960,10 @@ navbar ul li a:hover{
     height: max-content;
   }
   .nit img{
-   
     width: fit-content;
     width: 100%;
   }
   #tagnit{
-  
     height:30vh ;
     padding-left: 1rem;
     display: flex;
@@ -1012,14 +1028,14 @@ navbar ul li a:hover{
     display: none;
   }
   .mainsec>p{
-    color: #fec58c;
+    color: #f4ede5;
     word-spacing: 2px;
   }
   .flexcont{
     flex-direction: column;
   }
   .flexcont>.fd{
-    color:  #f8a553;
+    color:  #fcf2e7;
   }
   .element >h3{
     color: #ffffff;
@@ -1202,10 +1218,16 @@ navbar ul li a:hover{
     position: absolute;
   }
   .nitimg{
+    border-top-left-radius: 30px;
     width: 100%;
   }
+  .edubx{
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding-bottom: 40px;
+  }
   #tagnit{
-  
+    border-radius: 40px;
     padding-left: 1rem;
      display: flex;
   }
@@ -1213,14 +1235,10 @@ navbar ul li a:hover{
   left: 10%;
   }
 
-  form input[type='text'],input[type='email'],input[type='number']{
-   min-width:max-content;
-   max-width: 200px;
+  form input[type='text'],input[type='number']{
+    width:200px;
+    min-width: max-content;
     margin: 2px;
-  }
-  form textarea{
-    min-width:max-content;
-    max-width: 100px;
   }
   .imgcont{
     display: none;
@@ -1308,9 +1326,6 @@ navbar ul li a:hover{
   }
 
   #s4{
-    position: fixed;
-    bottom: 18%;
-    right: 20px;
     transition: all 0.4s;
     display: flex;
     justify-content: center;
@@ -1337,15 +1352,19 @@ navbar ul li a:hover{
   background-color: #7703dd;
   color: rgb(3, 218, 129);
     }
+    input[type='text'],input[type='email'],input[type='phone']{
+      width: max-content;
+  }
+  textarea{
+    width: max-content;
+    min-width: 260px;
+  }
   }
 
 .projects {
-  background: #0c1d8acd;
-  background: radial-gradient(circle,rgba(161, 214, 242, 0.833) 0%, rgba(13, 35, 60, 0.882) 85%);
   padding: 50px 20px;
-  color: #fff;
+  background-color: #0000009d;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
 }
 
 .projects h1 {
@@ -1364,33 +1383,44 @@ navbar ul li a:hover{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  
   gap: 30px;
+ 
 }
 
 .prj {
-  background-color: #fff;
-  color: #333;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #e9e9e9;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
   padding: 25px;
   border-radius: 20px;
+  font-size: 13px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
- height: max-content;
+  height: max-content;
 }
 
 .prj:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
+.projects .prj:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5),0 0 35px rgba(255, 180, 0, 0.4);
+} 
 
 .prj h2 {
   font-size: 1.5rem;
   margin-bottom: 10px;
   color: #b22222;
+  color: rgba(174, 252, 252, 0.863);
 }
 
 .prj h3 {
-  font-size: 1.1rem;
+  font-size: 13px;
   margin-bottom: 10px;
-  color: #444;
+  color: #908358e3;
 }
 
 .prj li {
@@ -1399,7 +1429,7 @@ navbar ul li a:hover{
 }
 
 .prj button {
-  background-color: #4622b2;
+  background-color:  #2f3963cd;
   color: #fff;
   border: none;
   padding: 10px 18px;
@@ -1411,7 +1441,8 @@ navbar ul li a:hover{
 }
 
 .prj button:hover {
-  background-color: #8b0000;
+  transition: all 0.3s;
+  background-color:#3e8a77;
 }
 
 a button {
@@ -1421,16 +1452,16 @@ a button {
 @media (max-width: 600px) {
   .projects h1 {
     font-size: 2rem;
+    color: #000;
   }
-
   .prj {
     padding: 20px;
   }
   
 }
-
 .prj h2 {
   font-size: 20px;
   display: flex;
   flex-wrap: wrap;
 }
+

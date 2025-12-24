@@ -18,7 +18,6 @@ for (let i = 0; i < trailSize; i++) {
 document.addEventListener("mousemove", (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
-
     if (!isMouseMoving) {
         // On the first move, initialize all trails to the body.cursor position
         trailElements.forEach((point) => {
@@ -64,3 +63,5 @@ function animate() {
 animate();
 
 });
+
+

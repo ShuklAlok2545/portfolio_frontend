@@ -53,7 +53,7 @@ inmenu.addEventListener("click" , ()=>{
 
       //All fields required
       if (!name || !mail || !contact || !message) {
-        alert("⚠️ Please fill in all the fields.");
+        alert(" Please fill in all the fields.");
         return;
       }
 
@@ -140,7 +140,7 @@ inmenu.addEventListener("click" , ()=>{
   }
   
   fetchCount();
-  setInterval(fetchCount, 1000);
+  setInterval(fetchCount, 5000);
   
   heart.addEventListener('click', async () => {
     if (!localStorage.getItem('hasClickedHeart')) {
@@ -158,4 +158,27 @@ inmenu.addEventListener("click" , ()=>{
     }
   });
   
-  
+
+const btnpopup = () => {
+  const btn = document.getElementById('blogs');
+  btn.classList.toggle('popup');
+};
+
+const resumepopup = () => {
+  const btn = document.getElementById('rsmbtn');
+  btn.classList.toggle('rsmpop');
+};
+document.addEventListener("DOMContentLoaded", () => {
+  setInterval(resumepopup, 2000);
+  setInterval(btnpopup, 2000);
+});
+
+
+const d = document.getElementById("date")
+d.textContent = new Date().getFullYear();
+
+const age = document.getElementById("age")
+const birthDate = new Date(2000, 7, 15); // Month is 0-based (August = 7)
+const today = new Date();
+
+age.textContent = today.getFullYear() - birthDate.getFullYear();
