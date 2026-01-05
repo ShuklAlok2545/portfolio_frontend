@@ -779,10 +779,11 @@ a.top2{
   color: rgb(3, 218, 129);
   }
 
-  #blogs.popup{
+.prj .popup{
     color: black;
     background: skyblue;
   }
+
   #rsmbtn.rsmpop{
     background: rgb(175, 137, 1);
   }
