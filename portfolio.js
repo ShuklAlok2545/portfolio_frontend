@@ -162,7 +162,10 @@ inmenu.addEventListener("click" , ()=>{
 const btnpopup = () => {
   const btn = document.getElementById('blogs');
   btn.classList.toggle('popup');
+  const btn2 = document.getElementById('blogs2');
+  btn2.classList.toggle('popup');
 };
+
 
 const resumepopup = () => {
   const btn = document.getElementById('rsmbtn');
